@@ -28,4 +28,11 @@ public class Tabuleiro {
 		this.colunas = colunas;
 	}
 	
+	public Peca peca(int linha, int coluna) { //METODO PARA RETORNAR A PECA PASSANDO A LINHA E COLUNA DELA
+		return this.pecas[linha][coluna];
+	}
+	
+	public Peca peca(Posicao posicao) { //SOBRECARGA DO METODO ACIMA, PARA A RETORNAR A PEÇA DADA UMA POSICAO
+		return this.pecas[posicao.getLinha()][posicao.getColuna()];
+	}
 }
